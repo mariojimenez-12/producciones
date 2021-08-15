@@ -26,7 +26,7 @@ class AdministradorController extends Controller
     public function index()
     {
         $administradores = User::all();
-        $eventos = Reservacion::paginate();
+        $eventos = Reservacion::latest()->take(5)->get();
         $grupo1 = Consentido::all();
         $grupo2 = Ismael::all();
         $boletines = Boletin::paginate(5);
