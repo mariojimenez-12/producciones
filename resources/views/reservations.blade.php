@@ -3,6 +3,18 @@
 @section('seccion')
     <div class="mt-5">.</div>
 
+    @php
+        $resultado = $_GET['resultado'];
+    @endphp
+
+    @if($resultado === '1')
+        <div class="container mt-5">
+            <div class="col-md-5">
+                <p class="alert alert-success text-center" role="alert">Reservación creada exitosamente</p>
+            </div>
+        </div>
+    @endif
+
     <main class="container mt-5">
         <h2 class="mb-5">Haz tu reservación para tu próximo evento</h2>
         

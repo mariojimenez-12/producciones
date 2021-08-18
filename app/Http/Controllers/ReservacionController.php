@@ -80,7 +80,7 @@ class ReservacionController extends Controller
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
-        return redirect('/reservations');
+        return redirect('/reservations?resultado=1');
     }
 
     /**

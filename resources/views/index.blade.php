@@ -48,21 +48,34 @@
 </section>
 
 <section class="comentarios">
+    @php
+        $resultado = $_GET['resultado'];
+    @endphp
+
+    @if($resultado === '1')
+        <div class="container">
+            <div class="col-md-5">
+                <p class="alert alert-success text-center" role="alert">Comentario creado exitosamente</p>
+            </div>
+        </div>
+    @endif
+
     <div class="container">
         <h2>Comentarios</h2>
         <p>A continuación puedes leer acerca de los grupos en general</p>
-        <div class="grid-column-3">
-            @foreach ($comentarios as $comentario)
-                <div class="p-3">
-                    <div class="grid-column-2">
-                        <img class="img-fluid" src="{{ asset('img/user.png') }}" alt="Imagen Usuario">
-                        <div class="w-auto p-3">
-                            <h3>{{ $comentario->nombre . " " . $comentario->apellido }}</h3>
-                            <p>Amante de la música</p>
-                        </div>
-                    </div>
-                    <div class="overflow-scroll">{{ $comentario->comentario }}</div>
-                </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            @foreach($comentarios as $comentario)
+                <div class="col">
+                    <div class="card shadow mt-2 mb-2 m-md-0">
+                        <img src="{{ asset('img/user.png') }}" alt="Imagen comentario" class="card-img-top">   
+                        <div class="card-body">
+                            <h4 class="card-title">{{ $comentario->nombre . " " . $comentario->apellido }}</h4>
+                            <p class="card-text">
+                                {!! $comentario->comentario !!}    
+                            </p>    
+                        </div> 
+                    </div>    
+                </div>                
             @endforeach
         </div>
     </div>
@@ -72,6 +85,7 @@
     </div>
 
     <div class="comentario contenedor">
+       
         <form action="{{ route('comentarios.store') }}" method="POST" class="container" novalidate>
             @csrf
             <h2>Deja tu comentario</h2>

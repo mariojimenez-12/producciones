@@ -57,7 +57,7 @@ class ComentarioController extends Controller
             'created_at' => date('Y-m-d H-i-s')
         ]);
 
-        return redirect('/');
+        return redirect('/?resultado=1');
     }
 
     /**
