@@ -25,8 +25,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preload" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="preload" href="{{asset('/css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/app.css')}}">
 </head>
 <body>
 
