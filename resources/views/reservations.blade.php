@@ -191,5 +191,5 @@
 @endsection
 
 @section('javascript')
-    <script src="{{ asset('js/reservacion.js') }}"></script>
+    <script src="/js/reservacion.js"></script>
 @endsection

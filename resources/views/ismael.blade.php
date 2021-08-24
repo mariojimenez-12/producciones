@@ -105,6 +105,6 @@
 @endsection
 
 @section('javascript')
-    <script src="{{ asset('js/tab.js') }}"></script>
-    <script src="{{ asset('js/galeria.js') }}"></script>
+    <script src="/js/tab.js"></script>
+    <script src="/js/galeria.js"></script>
 @endsection
