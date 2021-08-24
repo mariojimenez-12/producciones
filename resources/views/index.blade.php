@@ -49,7 +49,7 @@
 
 <section class="comentarios">
     @php
-        $resultado = $_GET['resultado'];
+        $resultado = $_GET['resultado'] ?? null;
     @endphp
 
     @if($resultado === '1')
