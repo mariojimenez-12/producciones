@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // $comentarios = DB::table('comentarios')->paginate(6);
+    $comentarios = DB::table('comentarios')->paginate(6);
 
     return view('index', compact('comentarios'));
 });
